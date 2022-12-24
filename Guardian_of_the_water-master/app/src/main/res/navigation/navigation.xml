@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/staterFragment">
+
+    <fragment
+        android:id="@+id/eventPage1Fragment"
+        android:name="com.example.guardian_of_the_water.eventFrag.EventPage1Fragment"
+        android:label="fragment_event_page1"
+        tools:layout="@layout/fragment_event_page1" >
+        <action
+            android:id="@+id/action_eventPage1Fragment_to_eventPage2Fragment"
+            app:destination="@id/eventPage2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventPage2Fragment"
+        android:name="com.example.guardian_of_the_water.eventFrag.EventPage2Fragment"
+        android:label="fragment_event_page2"
+        tools:layout="@layout/fragment_event_page2" >
+        <action
+            android:id="@+id/action_eventPage2Fragment_to_eventPage3Fragment"
+            app:destination="@id/eventPage3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/staterFragment"
+        android:name="com.example.guardian_of_the_water.StaterFragment"
+        android:label="fragment_stater"
+        tools:layout="@layout/fragment_stater" >
+        <action
+            android:id="@+id/action_staterFragment_to_eventPage1Fragment"
+            app:destination="@id/eventPage1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventPage3Fragment"
+        android:name="com.example.guardian_of_the_water.eventFrag.EventPage3Fragment"
+        android:label="fragment_event_page3"
+        tools:layout="@layout/fragment_event_page3" />
+</navigation>
